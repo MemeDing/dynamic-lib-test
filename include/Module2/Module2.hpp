@@ -17,15 +17,4 @@ public:
     void bubbleSort(std::vector<int> &vec);
 };
 
-extern "C"
-{
-    IModule *createModule()
-    {
-        return new Module2();
-    }
-
-    void deleteModule(IModule *modulePtr)
-    {
-        delete modulePtr;
-    }
-}
+SETUP_MODULE(Module2)

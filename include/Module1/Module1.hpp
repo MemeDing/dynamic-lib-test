@@ -19,15 +19,4 @@ public:
     void quickSort(std::vector<int> &vec, int low, int high);
 };
 
-extern "C"
-{
-    IModule *createModule()
-    {
-        return new Module1();
-    }
-
-    void deleteModule(IModule *modulePtr)
-    {
-        delete modulePtr;
-    }
-}
+SETUP_MODULE(Module1)
